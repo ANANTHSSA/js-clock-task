@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title> clock & time</title>
+<style>
+span{
+    background-color:orangered;
+    color:#fff;
+    padding: 5px;
+}
+
+
+
+</style>
+</head>
+<body>
+       <!-- <h2 id="head">Heading tag</h2>
+       <p id="para">Paragraph tag</p>
+       <button id="submit"> click </button> -->
+       <p>current time is <span id="sample"></span></p>
+       <button onclick="alertDelay()"> delay alert</button>
+       <button onclick="alertStop()"> alert stop</button>
+
+
+<script>
+  function time(){
+  
+   let date=new Date().toLocaleTimeString();
+     console.log(date);
+       let span=document.getElementById("sample");
+        span.innerHTML=date;
+       
+    }
+       let clear=setInterval(time,1000);
+   
+
+    function alertDelay(){
+     setTimeout(alertDisplay,2000);
+    }
+   function alertDisplay(){
+     alert("hello i am delay");
+
+   }
+   function alertStop(){
+    clearInterval(clear);
+   }
+
+
+</script>
+ 
+</body>
+
+
+</html>
